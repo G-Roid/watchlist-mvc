@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav>
+        <ul class="navLinks">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
     <h1>Movies</h1>
     <ul>
     <% todos.forEach( el => { %>
@@ -21,7 +26,7 @@
     <h2>Movies To Watch: <%= left %></h2>
 
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Movie Title" name='todoItem'>
+        <input type="text" placeholder="Enter Movie Title" name='todoItem' autocomplete="off">
         <input type="submit">
     </form>
 

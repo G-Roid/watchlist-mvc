@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav>
+        <ul class="navLinks">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
     <h1>Shows</h1>
     <ul>
     <% todos.forEach( el => { %>
@@ -21,7 +26,7 @@
     <h2>Shows To Watch: <%= left %></h2>
 
     <form action="/shows/createTodo" method='POST'>
-        <input type="text" placeholder="Show Title" name='todoItem'>
+        <input type="text" placeholder="Show Title" name='todoItem' autocomplete="off">
         <input type="submit">
     </form>
 
